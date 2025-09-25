@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sistema de Animaciones 3D - Jezrael Jared Gómez Torres</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="text/css" rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div id="info">
+      <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> -
+      Sistema de Animaciones 3D<br />
+      <strong>Desarrollado por:</strong> <span style="color: #00ff00;">Jezrael Jared Gómez Torres</span><br />
+      <strong>Controles de Animación:</strong><br />
+      <span style="color: #ff0;">1</span> - Capoeira | 
+      <span style="color: #ff0;">2</span> - Dying | 
+      <span style="color: #ff0;">3</span> - Jumping Down<br />
+      <span style="color: #ff0;">4</span> - Sitting Laughing | 
+      <span style="color: #ff0;">5</span> - Angry<br />
+      <em>Transiciones suaves entre animaciones</em>
+    </div>
+
+    <!-- Importmap para los módulos -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./build/three.module.js",
+          "three/addons/": "./jsm/"
+        }
+      }
+    </script>
+
+    <!-- Tu código JS separado -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
