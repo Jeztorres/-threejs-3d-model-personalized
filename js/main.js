@@ -242,7 +242,7 @@ function loadCharacterBase() {
   console.log("👤 Cargando personaje base (Erika Archer)...");
   
   // Cargar el personaje base con su animación inicial
-  loader.load("models/character_animations/Erika Archer.fbx", function (group) {
+  loader.load("/-threejs-3d-model-personalized/models/character_animations/Erika Archer.fbx", function (group) {
     console.log("✅ Personaje base cargado exitosamente");
     
     // Limpiar objeto anterior si existe
@@ -327,7 +327,7 @@ function loadAdditionalAnimations() {
   let loadedCount = 0;
   
   animationFiles.forEach((animationName, index) => {
-    loader.load(`models/animations_only/${animationName}.fbx`, function (group) {
+    loader.load(`/-threejs-3d-model-personalized/models/animations_only/${animationName}.fbx`, function (group) {
       console.log(`✅ Animación cargada: ${animationName}`);
       
       // Extraer la animación del grupo
