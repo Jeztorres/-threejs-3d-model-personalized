@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
-    <link type="text/css" rel="stylesheet" href="./css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
@@ -25,16 +25,26 @@
     </div>
 
     <!-- Importmap para los módulos -->
-    <script type="importmap">
-      {
+    <script>
+      // Detectar la ruta base para GitHub Pages
+      const basePath = window.location.pathname.includes('/-threejs-3d-model-personalized') 
+        ? '/-threejs-3d-model-personalized' 
+        : '.';
+      
+      const importMap = {
         "imports": {
-          "three": "./build/three.module.js",
-          "three/addons/": "./jsm/"
+          "three": `${basePath}/build/three.module.js`,
+          "three/addons/": `${basePath}/jsm/`
         }
-      }
+      };
+      
+      const script = document.createElement('script');
+      script.type = 'importmap';
+      script.textContent = JSON.stringify(importMap);
+      document.head.appendChild(script);
     </script>
 
     <!-- Tu código JS separado -->
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
