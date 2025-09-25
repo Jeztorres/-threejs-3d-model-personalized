@@ -24,24 +24,14 @@
       <em>Transiciones suaves entre animaciones</em>
     </div>
 
-    <!-- Importmap para los módulos -->
-    <script>
-      // Detectar la ruta base para GitHub Pages
-      const basePath = window.location.pathname.includes('/-threejs-3d-model-personalized') 
-        ? '/-threejs-3d-model-personalized' 
-        : '.';
-      
-      const importMap = {
+    <!-- Importmap para los módulos usando CDN -->
+    <script type="importmap">
+      {
         "imports": {
-          "three": `${basePath}/build/three.module.js`,
-          "three/addons/": `${basePath}/jsm/`
+          "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
         }
-      };
-      
-      const script = document.createElement('script');
-      script.type = 'importmap';
-      script.textContent = JSON.stringify(importMap);
-      document.head.appendChild(script);
+      }
     </script>
 
     <!-- Tu código JS separado -->

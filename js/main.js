@@ -241,13 +241,8 @@ function setupGUI() {
 function loadCharacterBase() {
   console.log("👤 Cargando personaje base (Erika Archer)...");
   
-  // Detectar la ruta base para GitHub Pages
-  const basePath = window.location.pathname.includes('/-threejs-3d-model-personalized') 
-    ? '/-threejs-3d-model-personalized' 
-    : '.';
-  
   // Cargar el personaje base con su animación inicial
-  loader.load(`${basePath}/models/character_animations/Erika Archer.fbx`, function (group) {
+  loader.load("models/character_animations/Erika Archer.fbx", function (group) {
     console.log("✅ Personaje base cargado exitosamente");
     
     // Limpiar objeto anterior si existe
@@ -321,11 +316,6 @@ function setupCharacter() {
 function loadAdditionalAnimations() {
   console.log("🎭 Cargando animaciones adicionales...");
   
-  // Detectar la ruta base para GitHub Pages
-  const basePath = window.location.pathname.includes('/-threejs-3d-model-personalized') 
-    ? '/-threejs-3d-model-personalized' 
-    : '.';
-  
   const animationFiles = [
     "Capoeira",
     "Dying",
@@ -337,7 +327,7 @@ function loadAdditionalAnimations() {
   let loadedCount = 0;
   
   animationFiles.forEach((animationName, index) => {
-    loader.load(`${basePath}/models/animations_only/${animationName}.fbx`, function (group) {
+    loader.load(`models/animations_only/${animationName}.fbx`, function (group) {
       console.log(`✅ Animación cargada: ${animationName}`);
       
       // Extraer la animación del grupo
