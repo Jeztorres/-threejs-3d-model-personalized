@@ -37,7 +37,7 @@ Desktop.ini
 node_modules/
 
 # Build outputs
-build/
+# build/ - Comentado porque necesitamos los archivos de Three.js
 dist/
 
 # Environment variables
